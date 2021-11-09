@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2.5fr 2.5fr 2.5fr;
+    gap: 1%;
+    margin: 0 5% 5% 5%;
+}
+
+.menu{
+    background-color: aquamarine;
+    display: grid;
+    justify-items: center;
+    align-items: center;  
+}
+
+.box1{
+    background-color: blueviolet;
+    display: grid;
+    justify-items: end; 
+    border: solid;
+}
+
+.chicken{
+    display: grid;
+    border-bottom: solid;
+    border-left: solid;
+    width: 40%;
+    justify-items: center;
+    align-items: center;
+}
+.chickentext{
+    padding: 1%;
+}
+
+.box2{
+    background-color: burlywood;
+    display: grid;
+    justify-items: end; 
+    border: solid;
+}
+
+.beef{
+    display: grid;
+    border-bottom: solid;
+    border-left: solid;
+    width: 40%;
+    justify-items: center;
+    align-items: center;
+}
+
+.beeftext{
+    padding: 1%;
+}
+
+.box3{
+    background-color: crimson;
+    display: grid;
+    justify-items: end; 
+    border: solid;
+}
+
+.sushi{
+    display: grid;
+    border-bottom: solid;
+    border-left: solid;
+    width: 40%;
+    justify-items: center;
+    align-items: center;
+}
+
+.sushitext{
+    padding: 1%;
+}
+
+@media(min-width: 426px){
+    .container{
+        margin: 1%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        gap: 1%;
+        grid-template-areas: 
+        "menu menu"
+        "box1 box2"
+        "box3 box3";
+    }
+    .menu{
+        grid-area: menu;
+    }
+
+    .box1{
+        grid-area: box1;
+    }
+
+    .chicken{
+        width: 45%;
+        height: 35%;
+    }
+
+    .box2 {
+        grid-area: box2;
+    }
+
+    .beef{
+        width: 45%;
+        height: 35%;
+    }
+
+    .box3{
+        grid-area: box3;
+    }
+
+    .sushi{
+        width: 45%;
+        height: 35%;
+    }
+}
+
+@media(min-width: 769px){
+    .container{
+        margin: 1%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        gap: 1%;
+        grid-template-areas: 
+        "menu menu menu"
+        "box1 box2 box3"
+    }
+}
